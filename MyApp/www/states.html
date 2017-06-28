@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Miasta</title>
+</head>
+<body>
+<div id="first" data-role="page" data-title="Białystok" >
+
+    <div data-role="header">
+
+        <a href="#home" data-icon="home" data-iconpos="notext">Start</a>
+    </div>
+    <div id="logo">
+        <img src="img/0.png" style="max-width: 60%" id="herb">
+    </div>
+    <div data-role="content">
+        <p><h3>Metryczka</h3></p>
+        <ul data-role="listview">
+            <li><p>Stolica województwa: <span id="p_stolica"></span></p></li>
+            <li><p>Liczba ludności:  <span id="p_ludnosc"></span></p></li>
+            <li><p>Powierzchnia:  <span id="p_pow"></span></p></li>
+        </ul>
+    </div>
+
+    <script>
+        var myAppUrl = "https://api.myjson.com/bins/101xi3";
+        $(document).on('pageshow', function () {
+            $.getJSON(myAppUrl, function( data ) {
+                var url_string = window.location;
+                var url = new URL(url_string);
+                var cityCode = url.searchParams.get("code");
+                if (cityCode != null) {
+                    document.getElementById("p_stolica").innerHTML = data[cityCode].stolica;
+                    document.getElementById("p_ludnosc").innerHTML = data[cityCode].ludnosc;
+                    document.getElementById("p_pow").innerHTML = data[cityCode].pow;
+                }
+                window.localStorage.setItem("city", cityCode);
+                $("#herb").attr("src","img/"+cityCode+".png");
+            })
+        });
+
+        var url_string = window.location;
+        var url = new URL(url_string);
+        var cityCode = url.searchParams.get("code");
+        if (url.searchParams.get("code") != null) {
+            $.getJSON(myAppUrl, function (data) {
+                document.getElementById("p_stolica").innerHTML = data[cityCode].stolica;
+                document.getElementById("p_ludnosc").innerHTML = data[cityCode].ludnosc;
+                document.getElementById("p_pow").innerHTML = data[cityCode].pow;
+                $("#herb").attr("src","img/"+cityCode+".png");
+            });
+        }
+    </script>
+
+
+    <div data-role="footer" data-position="fixed"> <!-- stopka -->
+        <div data-role="controlgroup" data-type="horizontal">  <!--zewnętrzny kontener paska -->
+            <a href="#" data-role="button" data-transition="info">Pobierz</a>
+            <a href="#two" data-role="button" data-transition="fade">Herby miast polskich</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
