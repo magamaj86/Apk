@@ -13,7 +13,7 @@
         <a href="#home" data-icon="home" data-iconpos="notext">Start</a>
     </div>
     <div id="logo">
-        <img src="img/0.png" style="max-width: 60%" id="herb">
+        <img src="img/20.png" style="max-width: 60%" id="woj">
     </div>
     <div data-role="content">
         <p><h3>Metryczka</h3></p>
@@ -37,7 +37,8 @@
                     document.getElementById("p_pow").innerHTML = data[cityCode].pow;
                 }
                 window.localStorage.setItem("city", cityCode);
-                $("#herb").attr("src","img/"+cityCode+".png");
+                cityCode = 20 + Number (cityCode);
+                $("#woj").attr("src","img/"+cityCode+".png");
             })
         });
 
@@ -49,7 +50,8 @@
                 document.getElementById("p_stolica").innerHTML = data[cityCode].stolica;
                 document.getElementById("p_ludnosc").innerHTML = data[cityCode].ludnosc;
                 document.getElementById("p_pow").innerHTML = data[cityCode].pow;
-                $("#herb").attr("src","img/"+cityCode+".png");
+                cityCode = 20 + Number (cityCode);
+                $("#woj").attr("src","img/"+cityCode+".png");
             });
         }
     </script>
