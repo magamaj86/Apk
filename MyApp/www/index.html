@@ -33,7 +33,7 @@
         $(document).on('pageshow', '#home',function(){
             var value = window.localStorage.getItem("city");
             if(value != null && value != "null"){
-                $.mobile.changePage("bialystok.html?code="+value);
+                $.mobile.changePage("cities.html?code="+value);
             }
 
             setTimeout(function(){
@@ -84,22 +84,7 @@
     <div data-role="content">
         <p><h2>Lista województw</h2></p>
         <ul data-role="listview">
-            <li><a href="states/dolnoslaskie.html">Województwo Dolnośląskie</a></li>  <!-- lista wojewodztw-->
-            <li><a href="states/kujawskopomorskie.html">Województwo Kujawsko-Pomorskie</a></li>
-            <li><a href="states/lubelskie.html">Województwo Lubelskie</a></li>
-            <li><a href="states/lubuskie.html">Województwo Lubuskie</a></li>
-            <li><a href="states/lodzkie.html">Województwo Łódzkie</a></li>
-            <li><a href="states/malopolskie.html">Województwo Małopolskie</a></li>
-            <li><a href="states/mazowieckie.html">Województwo Mazowieckie</a></li>
-            <li><a href="states/opolskie.html">Województwo Opolskie</a></li>
-            <li><a href="states/podkarpackie.html">Województwo Podkarpackie</a></li>
-            <li><a href="states/podlaskie.html">Województwo Podlaskie</a></li>
-            <li><a href="states/pomorskie.html">Województwo Pomorskie</a></li>
-            <li><a href="states/slaskie.html">Województwo Śląskie</a></li>
-            <li><a href="states/swietokrzyskie.html">Województwo Świętokrzyskie</a></li>
-            <li><a href="states/warminsko.html">Województwo Warmińsko-Mazurskie</a></li>
-            <li><a href="states/wielkopolskie.html">Województwo Wielkopolskie</a></li>
-            <li><a href="states/zachodniopomorskie.html">Województwo Zachodniopomorskie</a></li>
+            <li><a href="states.html?code=0">Województwo Dolnośląskie</a></li>  <!-- lista wojewodztw-->
         </ul>
     </div>
     <div data-role="footer" data-position="fixed"> <!-- stopka -->
@@ -119,22 +104,22 @@
     <div data-role="content">
         <p><h2>Lista miast</h2></p>
         <ul data-role="listview">
-            <li><a href="bialystok.html?code=0">Białystok</a></li>
-            <li><a href="bialystok.html?code=1">Gdańsk</a></li>
-            <li><a href="bialystok.html?code=2">Katowice</a></li>
-            <li><a href="bialystok.html?code=3">Kielce</a></li>
-            <li><a href="bialystok.html?code=4">Kraków</a></li>
-            <li><a href="bialystok.html?code=5">Lublin</a></li>
-            <li><a href="bialystok.html?code=6">Łódź</a></li>
-            <li><a href="bialystok.html?code=7">Olsztyn</a></li>
-            <li><a href="bialystok.html?code=8">Opole</a></li>
-            <li><a href="bialystok.html?code=9">Poznań</a></li>
-            <li><a href="bialystok.html?code=10">Rzeszów</a></li>
-            <li><a href="bialystok.html?code=11">Szczecin</a></li>
-            <li><a href="bialystok.html?code=12">Toruń</a></li>
-            <li><a href="bialystok.html?code=13">Warszawa</a></li>
-            <li><a href="bialystok.html?code=13">Wrocław</a></li>
-            <li><a href="bialystok.html?code=14">Zielona Góra</a></li>
+            <li><a href="cities.html?code=0">Białystok</a></li>
+            <li><a href="cities.html?code=1">Gdańsk</a></li>
+            <li><a href="cities.html?code=2">Katowice</a></li>
+            <li><a href="cities.html?code=3">Kielce</a></li>
+            <li><a href="cities.html?code=4">Kraków</a></li>
+            <li><a href="cities.html?code=5">Lublin</a></li>
+            <li><a href="cities.html?code=6">Łódź</a></li>
+            <li><a href="cities.html?code=7">Olsztyn</a></li>
+            <li><a href="cities.html?code=8">Opole</a></li>
+            <li><a href="cities.html?code=9">Poznań</a></li>
+            <li><a href="cities.html?code=10">Rzeszów</a></li>
+            <li><a href="cities.html?code=11">Szczecin</a></li>
+            <li><a href="cities.html?code=12">Toruń</a></li>
+            <li><a href="cities.html?code=13">Warszawa</a></li>
+            <li><a href="cities.html?code=13">Wrocław</a></li>
+            <li><a href="cities.html?code=14">Zielona Góra</a></li>
         </ul>
     </div>
     <div data-role="footer" data-position="fixed"> <!-- stopka -->
