@@ -32,8 +32,17 @@
 
         $(document).on('pageshow', '#home',function(){
             var value = window.localStorage.getItem("city");
-            if(value != null && value != "null"){
+            console.log(value);
+            if(value != null && value != "null"){       <!-- Odzczyt i wyczyszczenie ostatnio odwiedzonego woj i miasta -->
+                window.localStorage.setItem("state", "null");
+                window.localStorage.setItem("city", "null");
                 $.mobile.changePage("cities.html?code="+value);
+            }
+             value = window.localStorage.getItem("state");
+            if(value != null && value != "null"){
+                window.localStorage.setItem("state", "null");
+                window.localStorage.setItem("city", "null");
+                $.mobile.changePage("states.html?code="+value);
             }
 
             setTimeout(function(){
@@ -41,7 +50,7 @@
                 startGoogleMaps();
             }, 1);
         });
-        function getRealContentHeight() {
+        function getRealContentHeight() {    <!-- ustawienia wysokosci-->
             var header = $.mobile.activePage.find("div[data-role='header']:visible");
             var footer = $.mobile.activePage.find("div[data-role='footer']:visible");
             var content = $.mobile.activePage.find("div[data-role='content']:visible:visible");

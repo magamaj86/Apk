@@ -6,7 +6,7 @@
     <title>Miasta</title>
 </head>
 <body>
-<div id="first" data-role="page" data-title="Białystok" >
+<div id="first" data-role="page" data-title="City" >
 
     <div data-role="header">
 
@@ -28,7 +28,7 @@
         console.log("start");
         var myAppUrl = "https://api.myjson.com/bins/d4z77";
         $(document).on('pageshow', function () {
-            $.getJSON(myAppUrl, function( data ) {
+            $.getJSON(myAppUrl, function( data ) {    <!-- Pobranie danych json-->
                 var url_string = window.location;
                 var url = new URL(url_string);
                 var cityCode = url.searchParams.get("code");
@@ -37,7 +37,7 @@
                     document.getElementById("p_ludnosc").innerHTML = data[cityCode].ludnosc;
                     document.getElementById("p_pow").innerHTML = data[cityCode].pow;
                 }
-                window.localStorage.setItem("city", cityCode);
+                window.localStorage.setItem("city", cityCode); <!--Zapisuje ostatnio odwiedzoe miasto, dziala tak samo w state -->
                 $("#herb").attr("src","img/"+cityCode+".png");
             })
         });
@@ -47,7 +47,7 @@
         var cityCode = url.searchParams.get("code");
         if (url.searchParams.get("code") != null) {
             $.getJSON(myAppUrl, function (data) {
-                document.getElementById("p_stolica").innerHTML = data[cityCode].stolica;
+                document.getElementById("p_stolica").innerHTML = data[cityCode].stolica;  <!-- wstawienie danych z json-->
                 document.getElementById("p_ludnosc").innerHTML = data[cityCode].ludnosc;
                 document.getElementById("p_pow").innerHTML = data[cityCode].pow;
                 $("#herb").attr("src","img/"+cityCode+".png");

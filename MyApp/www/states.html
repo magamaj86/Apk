@@ -25,7 +25,7 @@
     </div>
 
     <script>
-        var myAppUrl = "https://api.myjson.com/bins/12qm7n";
+        var myAppUrl = "https://api.myjson.com/bins/12qm7n";  <!--Pbieranie z json -->
         $(document).on('pageshow', function () {
             $.getJSON(myAppUrl, function( data ) {
                 var url_string = window.location;
@@ -36,7 +36,7 @@
                     document.getElementById("p_ludnosc").innerHTML = data[cityCode].ludnosc;
                     document.getElementById("p_pow").innerHTML = data[cityCode].pow;
                 }
-                window.localStorage.setItem("city", cityCode);
+                window.localStorage.setItem("state", cityCode); <!--Przechowuje ostatnie -->
                 cityCode = 20 + Number (cityCode);
                 $("#woj").attr("src","img/"+cityCode+".png");
             })
@@ -45,7 +45,7 @@
         var url_string = window.location;
         var url = new URL(url_string);
         var cityCode = url.searchParams.get("code");
-        if (url.searchParams.get("code") != null) {
+        if (url.searchParams.get("code") != null) {     <!-- -->
             $.getJSON(myAppUrl, function (data) {
                 document.getElementById("p_stolica").innerHTML = data[cityCode].stolica;
                 document.getElementById("p_ludnosc").innerHTML = data[cityCode].ludnosc;
