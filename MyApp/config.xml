@@ -19,9 +19,9 @@
       Herby województw i miast polskich.
   </description>
 
-  <author href="https://github.com/magamaj86/Aplikacja_herby" email="ola.jed@wp.pl">
+  <author href="https://github.com/magamaj86/Apk.git" email="ola.jed@wp.pl">
       A.Jedrichowska, A.Juszczak
   </author>
 
-    <icon src="icon.png" />
+    <icon src="img/icon.png" />
 </widget>
