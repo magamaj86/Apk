@@ -48,22 +48,22 @@ function startGoogleMaps() {
 
 
     // marker z dymkiem
-    addMarker(50.06465, 19.94498, 'Miasto Kraków         </br><a href="krakow.html">Zobacz więcej</a>');
-    addMarker(51.107885, 17.038538, 'Miasto Wrocław      </br><a href="wroclaw.html">Zobacz więcej</a>');
-    addMarker(50.675107, 17.921298, 'Miasto Opole        </br><a href="opole.html">Zobacz więcej</a>');
-    addMarker(50.264892, 19.023782, 'Miasto Katowice     </br><a href="katowice.html">Zobacz więcej</a>');
-    addMarker(50.041187, 21.99912, 'Miasto Rzeszów       </br><a href="rzeszow.html">Zobacz więcej</a>');
-    addMarker(51.246454, 22.568446, 'Miasto Lublin       </br><a href="lublin.html">Zobacz więcej</a>');
-    addMarker(50.866077, 20.628568, 'Miasto Kielce       </br><a href="kielce.html">Zobacz więcej</a>');
-    addMarker(51.759249, 19.455983, 'Miasto Łódź         </br><a href="lodz.html">Zobacz więcej</a>');
-    addMarker(52.406374, 16.925168, 'Miasto Poznań       </br><a href="poznan.html">Zobacz więcej</a>');
-    addMarker(51.935621, 15.506186, 'Miasto Zielona Góra </br><a href="zielona_gora.html">Zobacz więcej</a>');
-    addMarker(53.428544, 14.552812, 'Miasto Szczecin     </br><a href="szczecin.html">Zobacz więcej</a>');
-    addMarker(53.01379, 18.598444, 'Miasto Toruń         </br><a href="torun.html">Zobacz więcej</a>');
-    addMarker(52.229676, 21.012229, 'Miasto Warszawa     </br><a href="warszawa.html">Zobacz więcej</a>');
-    addMarker(53.132489, 23.16884, 'Miasto Białystok     </br><a href="../bialystok.html">Zobacz więcej</a>');
-    addMarker(53.778422, 20.480119, 'Miasto Olsztyn      </br><a href="olsztyn.html">Zobacz więcej</a>');
-    addMarker(54.352025, 18.646638, 'Miasto Gdańsk       </br><a href="gdansk.html">Zobacz więcej</a>');
+    addMarker(50.06465, 19.94498, 'Miasto Kraków         </br><a href="cities.html?code=4">Zobacz więcej</a>');
+    addMarker(51.107885, 17.038538, 'Miasto Wrocław      </br><a href="cities.html?code=14">Zobacz więcej</a>');
+    addMarker(50.675107, 17.921298, 'Miasto Opole        </br><a href="cities.html?code=8">Zobacz więcej</a>');
+    addMarker(50.264892, 19.023782, 'Miasto Katowice     </br><a href="cities.html?code=2">Zobacz więcej</a>');
+    addMarker(50.041187, 21.99912, 'Miasto Rzeszów       </br><a href="cities.html?code=10">Zobacz więcej</a>');
+    addMarker(51.246454, 22.568446, 'Miasto Lublin       </br><a href="cities.html?code=5">Zobacz więcej</a>');
+    addMarker(50.866077, 20.628568, 'Miasto Kielce       </br><a href="cities.html?code=3">Zobacz więcej</a>');
+    addMarker(51.759249, 19.455983, 'Miasto Łódź         </br><a href="cities.html?code=6">Zobacz więcej</a>');
+    addMarker(52.406374, 16.925168, 'Miasto Poznań       </br><a href="cities.html?code=9">Zobacz więcej</a>');
+    addMarker(51.935621, 15.506186, 'Miasto Zielona Góra </br><a href="cities.html?code=15">Zobacz więcej</a>');
+    addMarker(53.428544, 14.552812, 'Miasto Szczecin     </br><a href="cities.html?code=11">Zobacz więcej</a>');
+    addMarker(53.01379, 18.598444, 'Miasto Toruń         </br><a href="cities.html?code=12">Zobacz więcej</a>');
+    addMarker(52.229676, 21.012229, 'Miasto Warszawa     </br><a href="cities.html?code=13">Zobacz więcej</a>');
+    addMarker(53.132489, 23.16884, 'Miasto Białystok     </br><a href="cities.html?code=0">Zobacz więcej</a>');
+    addMarker(53.778422, 20.480119, 'Miasto Olsztyn      </br><a href="cities.html?code=7">Zobacz więcej</a>');
+    addMarker(54.352025, 18.646638, 'Miasto Gdańsk       </br><a href="cities.html?code=1">Zobacz więcej</a>');
     addStateLine(); // obramowka wojewodztwa
 }
 
